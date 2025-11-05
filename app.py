@@ -64,9 +64,10 @@ elif page == "About Me":
             """
             ### 🧠 My Story  
             I’m passionate about creating things that combine logic and creativity.  
-            I enjoy exploring full-stack development, mobile apps, and fun coding projects.  
+            I enjoy creating simulations.  
 
-            Outside tech, I love gaming and currently learning the piano 🎹.
+            Outside tech, I love gaming and currently learning the piano 🎹.  
+            I also enjoy playing games, and watching movies.
             """
         )
     st.markdown(
