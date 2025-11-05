@@ -7,6 +7,7 @@ with open("style.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 
+
 # --- PAGE CONFIG ---
 st.set_page_config(
     page_title="My Portfolio | Streamlit Demo",
@@ -23,6 +24,8 @@ st.sidebar.info("Built using Streamlit")
 
 # --- HOME PAGE ---
 if page == "Home":
+
+
     st.title("👋 Welcome to My Portfolio!")
     st.subheader("Hi, I’m **Seth**, a Computer Science student & developer.")
     st.markdown(
@@ -34,7 +37,7 @@ if page == "Home":
     )
 
 
-    st.metric("Projects Completed", 4, "+1 this year")
+    st.metric("Projects Completed", 4, "+1 this month")
     st.metric("Cups of Coffee", 288)
 
     st.success("Explore my projects using the sidebar!")
@@ -97,15 +100,20 @@ elif page == "About Me":
         with mid:
             st.image("images/cit_logo.png")
     st.divider()
-    st.markdown(
-        """
-        ### Current Information
-        - **Full Name**: Seth Nathaniel Galacio Emia
-        - **Gender**: Male
-        - **Current Address**: Tisa, Cebu City, Cebu, Philippines
-        - **Birthdate**: March 05, 2005
-        """
-    )
+    st.subheader("📋 Current Information")
+
+    data = {
+        "Detail": ["Full Name", "Gender", "Current Address", "Birthdate"],
+        "Information": [
+            "Seth Nathaniel Galacio Emia",
+            "Male",
+            "Tisa, Cebu City, Cebu, Philippines",
+            "March 05, 2005"
+        ]
+    }
+
+    df = pd.DataFrame(data)
+    st.table(df)
     tisa_coordinates = {
         'latitude':[10.303331005933412],
         'longitude':[123.87098718168049]
