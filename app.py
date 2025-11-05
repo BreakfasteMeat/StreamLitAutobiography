@@ -30,15 +30,17 @@ if page == "Home":
     st.subheader("Hi, I’m **Seth**, a Computer Science student & developer.")
     st.markdown(
         """
-        Welcome to my digital portfolio!  
-        Here, you’ll find my **background**, **projects**, and **ways to contact me**.  
-        I love creating applications using **Python**, **Java**, and **web technologies**.
+        >Welcome to my digital portfolio!  
+        >Here, you’ll find my **background** with a **short autobiography**, and **projects**.  
+        >I love creating applications using **Python**, **Java**, and **web technologies**.
         """
     )
 
 
     st.metric("Projects Completed", 4, "+1 this month")
-    st.metric("Cups of Coffee", 288)
+    st.metric("Cups of Coffee", 288,"+2 this month")
+    st.metric("Certificates Earned", 2)
+
 
     st.success("Explore my projects using the sidebar!")
 
