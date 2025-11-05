@@ -33,7 +33,6 @@ if page == "Home":
         """
     )
 
-    st.image("https://picsum.photos/800/300", caption="Creativity in motion")
 
     st.metric("Projects Completed", 4, "+1 this year")
     st.metric("Cups of Coffee", 288)
@@ -69,7 +68,7 @@ elif page == "About Me":
         """
         ## Early Life and Education
         > I was born and raised in Cebu City. I studied elementary and middle school in **Little Angels Montessori School**. I then
-        > was able to enter **Cebu City National Science High School&& and studied Junior High School and Senior High School there.
+        > was able to enter **Cebu City National Science High School** and studied Junior High School and Senior High School there.
         > I took STEM as my strand in SHS 
         > In high school, I enjoyed subjects like **Mathematics**, **Science**, and especially **Programming** in Grade 10.
         > This inspired me to pursue Computer Science for my college degree.
