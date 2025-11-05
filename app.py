@@ -16,7 +16,7 @@ st.set_page_config(
 )
 
 # --- SIDEBAR ---
-st.sidebar.title("🌟 Navigation")
+st.sidebar.header("🌟 Navigation")
 page = st.sidebar.radio("Go to", ["Home", "About Me", "Projects"])
 
 st.sidebar.divider()
@@ -26,7 +26,7 @@ st.sidebar.info("Built using Streamlit")
 if page == "Home":
 
 
-    st.title("👋 Welcome to My Portfolio!")
+    st.markdown("""<div class='primary-custom-box'><h1>Welcome to My Portfolio!</h1><div>""", unsafe_allow_html=True)
     st.subheader("Hi, I’m **Seth**, a Computer Science student & developer.")
     st.markdown(
         """
@@ -46,7 +46,7 @@ if page == "Home":
 
 # --- ABOUT ME PAGE ---
 elif page == "About Me":
-    st.header("📘 About Me")
+    st.markdown("""<div class='primary-custom-box'><h1>About Me</h1><div>""", unsafe_allow_html=True)
 
     col1, col2 = st.columns([1, 2])
     with col1:
@@ -105,12 +105,16 @@ elif page == "About Me":
     st.subheader("📋 Current Information")
 
     data = {
-        "Detail": ["Full Name", "Gender", "Current Address", "Birthdate"],
+        "Detail": ["Full Name", "Gender", "Current Address", "Birthdate","Contact Number","Email Address","Github Profile","Hobbies"],
         "Information": [
             "Seth Nathaniel Galacio Emia",
             "Male",
             "Tisa, Cebu City, Cebu, Philippines",
-            "March 05, 2005"
+            "March 05, 2005",
+            "0991 204 3880",
+            "sethnathanemia@gmail.com",
+            "https://github.com/BreakfasteMeat",
+            "Coding, Gaming, Learning Piano"
         ]
     }
 
@@ -160,7 +164,7 @@ elif page == "About Me":
 
 # --- PROJECTS PAGE ---
 elif page == "Projects":
-    st.header("🧩 My Projects")
+    st.markdown("""<div class='primary-custom-box'><h1>My Projects</h1><div>""", unsafe_allow_html=True)
 
     tab1, tab2, tab3, tab4= st.tabs(["🚀 2D Physics Engine (Ongoing)", "𖣯 Quad Trees", "🌳 Binary Trees"," 🌐 Graph Data Structure (Ongoing)"])
 
@@ -202,28 +206,7 @@ elif page == "Projects":
             - Tools: Java w/ JavaFX
             """
         )
-# --- CONTACT PAGE ---
-elif page == "Contact":
-    st.header("📬 Get in Touch")
-    st.write("I’d love to hear from you! Fill out the form below.")
 
-    with st.form("contact_form"):
-        name = st.text_input("Name")
-        email = st.text_input("Email")
-        message = st.text_area("Message")
-        submit = st.form_submit_button("Send Message")
-
-        if submit:
-            if name and email and message:
-                st.success(f"✅ Thanks {name}, your message has been sent!")
-                with st.spinner("Processing..."):
-                    time.sleep(2)
-            else:
-                st.error("⚠️ Please fill out all fields before submitting.")
-
-    st.divider()
-    st.info("📧 You can also reach me at: **seth.emia@example.com**")
-    st.link_button("Visit my GitHub", "https://github.com/yourusername")
 
 # --- FOOTER ---
 st.divider()

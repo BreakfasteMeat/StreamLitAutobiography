@@ -1,5 +1,5 @@
 .stApp{
-    background-color: #2c2c2c;
+    background-color: #1c1c1c;
 }
 
 section[data-testid="stSidebar"]{
@@ -8,3 +8,39 @@ section[data-testid="stSidebar"]{
 header[data-testid="stHeader"]{
     background-color: #303030;
 }
+
+
+.primary-custom-box{
+
+    background-color: #1e1e1e;
+    border: 5px solid #8dff1d;
+    border-radius: 15px;
+    padding: 25px;
+    margin: 20px 0;
+    box-shadow: 0 0 20px rgba(141, 255, 29, 0.3);
+    text-align: center;
+
+
+}
+.primary-custom-box h1{
+    font-family: 'Consolas', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace !important;
+    color: #8dff1d;
+}
+
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1 a, h2 a, h3 a {
+    display: none !important;
+    visibility: hidden !important;
+    position: absolute !important;
+    height: 0 !important;
+    width: 0 !important;
+    overflow: hidden !important;
+}
+
+
+
